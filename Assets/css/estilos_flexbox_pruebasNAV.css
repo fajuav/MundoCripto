@@ -17,6 +17,8 @@
     --primary-color: rgb(0, 173, 181);
     --primary-color-2:rgb(0, 89, 94);
     --secondary-color: rgb(57, 62, 70);
+    --tertiary-color: rgb(86, 93, 105);
+
     --text-title: rgb(53, 133, 139);
     --text-color: rgb(238, 238, 238);
     --bottom-margin: 0.5rem;
@@ -185,13 +187,24 @@ h3 {
     
 }
 
+#seccion .container div{
+    max-width: 600px;
+    background-color: var(--tertiary-color);
+    border-radius:1em 	
+    
+}
+
+#seccion .container h4 {
+    display: flex;
+    font-style: "bold";
+    font-size: 3em;
+    color: var(--text-color);	
+}
 
 #seccion .container p {
     display: flex;
-    background-color: var(--primary-color);
     padding: 10px;
-    max-width: 250px;
-    border-radius:1em 	
+    
 }
 
 
@@ -203,7 +216,7 @@ h3 {
     color: var(--text-color);
     order: 1;
     flex: 2 1 auto;
-    max-width: 900px;
+   
     padding: 50px;
 }
 
