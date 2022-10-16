@@ -15,6 +15,7 @@
     --bolder-font: 900;
     --bg-color: rgb(34, 40, 49);
     --primary-color: rgb(0, 173, 181);
+    --primary-color-2:rgb(0, 89, 94);
     --secondary-color: rgb(57, 62, 70);
     --text-title: rgb(53, 133, 139);
     --text-color: rgb(238, 238, 238);
@@ -71,39 +72,128 @@ body {
 
 }
 
-nav {
-    padding: 1em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: sticky;
+
+/* keyframe */ 
+
+@keyframes example {
+    from {background-color:var(--primary-color);}
+    to {background-color: var(--primary-color-2);}
+  }
+
+/* H */
+
+h2 {
+    /*margin-right: 100px;*/
+
+    background-color: var(--primary-color);
+    font-style: "bold";
+    font-size: 5em;
+    color: var(--secondary-color);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+
+
+
+
+h2 {
+
+    background-color: var(--secondary-color);
+    font-weight: bolder;
 }
 
-nav ul {
+h3 {
+
+    background-color: var(--secondary-color);
+    font-style: "bold";
+    font-size: 4em;
+    color: var(--text-color);
+}
+
+/*nav */
+
+#navbar {
+    background: VAR(--secondary-color);
+    position: sticky;
+    top: 0;
+}
+
+#navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#navbar .logo {
+    color: white;
+    margin-left: 0px;
+}
+
+#navbar .container ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar .container ul li {
     list-style: none;
-    padding: 0;
-    margin: 0;
+}
+
+#navbar .container ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    border-radius: 0px;
+}
+
+.active,
+#navbar .container ul li a:hover {
+    background-color: var(--orange);
+    color: #000 !important;
+}
+
+
+/* section */ 
+
+#seccion {
+    background: VAR(--secondary-color);
+       top: 0;
+}
+
+#seccion .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start ;
+    align-items:center;
+    padding-top: 0px;
+    padding-bottom: 0px;
     
 }
 
-nav li a {
-    color: white;
-    display: block;
-    text-decoration: none;
-    padding: .5em 1em;
+
+#seccion .container p {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 10px;
+    max-width: 250px;
+    border-radius:1em 	
 }
 
-nav li a:hover {
-    background: tomato;
-    color: white;
-}
-
-
-
-
-
-.textoPrincipal {
-    font-size: 12px;
-}
 
 .itemTipo1 {
     background: var(--primary-color);
@@ -141,6 +231,7 @@ nav li a:hover {
         -moz-osx-font-smoothing: grayscale;
         position: sticky;
     }
+
     nav ul {
         display: flex;
         justify-content: flex-end;
@@ -215,30 +306,7 @@ nav li a:hover {
 
 
 
-/* H */
 
-h1 {
-    /*margin-right: 100px;*/
-
-    background-color: var(--primary-color);
-    font-style: "bold";
-    font-size: 5em;
-    color: var(--secondary-color);
-
-}
-
-
-h2 {
-
-    background-color: var(--secondary-color);
-    font-weight: bolder;
-}
-
-h3 {
-
-
-    background-color: var(--secondary-color)
-}
 
 
 
