@@ -32,13 +32,17 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 /* CSS Resets */
 * {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
 }
 
 ul {
@@ -54,16 +58,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-* {
-
-
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    color: var(--text-color);
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    padding: 0px;
-
-}
 
 /* Puntos de corte */
 
@@ -100,6 +94,7 @@ h2 {
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
+  
 
 }
 
@@ -119,6 +114,7 @@ h3 {
     background: VAR(--secondary-color);
     position: sticky;
     top: 0;
+  
 }
 
 #navbar .container {
@@ -128,19 +124,13 @@ h3 {
     align-items: center;
     padding-top: 0px;
     padding-bottom: 0px;
+
+
 }
 
-#navbar .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
 
 #navbar .logo {
-    color: white;
+    color: var(--text-color);
     margin-left: 0px;
 }
 
@@ -156,10 +146,11 @@ h3 {
 
 #navbar .container ul li a {
     text-decoration: none;
-    color: #fff;
-    padding: 0px 0px;
+    color: var(--text-color);
+    padding: .5em 1em;
     margin: 0px 0px;
     border-radius: 0px;
+    
 }
 
 .active,
@@ -174,15 +165,20 @@ h3 {
 #seccion {
     background: VAR(--secondary-color);
     top: 0;
+    border-radius: 1%;
+    padding: 10px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    bottom: 10vh;
 }
 
 #seccion .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    justify-content: space-around;
+    align-items: space-around;
+    padding: .5em 1em;
+    row-gap: 5vh;
 
 }
 
@@ -190,8 +186,9 @@ h3 {
     max-width: 600px;
     background-color: var(--tertiary-color);
     border-radius: 1em;
-    flex: 1 1 30%;
-
+   
+    
+    
 }
 
 #seccion .container h4 {
@@ -199,27 +196,36 @@ h3 {
     font-style: "bold";
     font-size: 3em;
     color: var(--text-color);
+    padding: 1rem;
 }
 
 #seccion .container p {
-    display: flex;
+    
     padding: 10px;
+    
 
 }
 
 #hero {
     background: VAR(--secondary-color);
     top: 0;
+    color: var(--text-color);
+    border-radius: 1%;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 
 }
 
 #hero .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: var(--primary-color-2);
+    border-width: 10rem;
+
 
 }
 
@@ -227,39 +233,95 @@ h3 {
 
 
     border-radius: 1em;
+    background-color: aqua;
 
 }
 
 #hero .container h4 {
-    display: flex;
+
     font-style: "bold";
     font-size: 3em;
     color: var(--text-color);
 
+
 }
 
 #hero .container p {
-    display: flex;
+   
     padding: 10px;
     font-size: 4em;
-    flex: 4 1 auto;
-    ;
+    
+    
+
 
 }
 
 #hero .container img {
-    display: flex;
-    padding: 10px;
-    flex: 1 2 auto;
 
-    max-width: 100%;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    padding: 10px;
+    
+    max-width: 75vw;
+    
+
 
 }
 
+
+/* cotizacion criptos */
+
+#cotiza {
+    background: VAR(--secondary-color);
+  
+    top: 0;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    bottom: 10vh;
+    color: var(--text-color);
+    border-radius: 1%;
+}
+
+#cotiza .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+#cotiza .container .coin-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+    margin: 7px;
+}
+
+#cotiza .container .coin-price .logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#cotiza .container .coin-price .logo img {
+    width: 100%;
+}
+
+#cotiza .container .coin-price div {
+    display: block;
+}
+
+#cotiza .container.coin-price div h1 {
+    font-size: 20px;
+}
+
+
+
+
+
+
 /* tabletas //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     body {
         font-size: 14px;
 
@@ -280,15 +342,35 @@ h3 {
 
     #hero .container {
 
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+
+    }
+
+    #hero .container p {
+
+        font-size: 4em;
+        width: 60vw;
+
+
+    }
+
+    #hero .container img {
+
+
+        width: 50vw;
+
 
     }
 
 
-
-
-
 }
+
+
+
+
+
+
+
 
 /* escritorio normales //////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
@@ -300,6 +382,28 @@ h3 {
         font-size: 18px;
     }
 
+
+
+    #hero .container {
+
+        flex-wrap: wrap;
+
+
+    }
+
+    #hero .container p {
+
+        
+        width: 45vw;
+        font-size: 3em;
+
+
+    }
+
+    #hero .container img {
+        width: 25vw;
+
+    }
 
 }
 
