@@ -41,6 +41,8 @@
     <section id="seccion">
 
         <div class="container">
+
+
             <div>
                 <h4>
                     Ingresa tus datos y se parte de MundoCripto
@@ -52,25 +54,71 @@
                     gratis!
                 </p>
 
-                <form action="show_data.html" target="_blank">
-                    <fieldset>
-                        <legend>Datos Personales</legend>
-                        <label for="firtsname">Nombre:</label><br>
-                        <input size="30" type="text" name="firstname" id="firstname">
-                        <br> <br>
-                        <label for="scndname">Apellido:</label><br>
-                        <input size="30" type="text" name="scndname" id="scndname">                  
-                        <br><br>
-                        <label for="scndname">E-mail</label><br>
-                        <input size="30" type="text" name="scndname" id="scndname"> 
-                        <br> <br>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Borrar">
+
+
+
+                <form id="fs-frm" name="registration-form" accept-charset="utf-8"
+                    action="https://formspree.io/f/xrgdanlo" method="POST">
+                    <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Nombre</label>
+                        <input type="text" name="name" id="full-name" placeholder="Nombre y apellido" required="">
+                        <br>
+                        <label for="email-address">Email</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                            required="">
+                        <br>
+                        <label for="street-address">Direccion</label>
+                        <input type="text" name="street" id="street-address" placeholder="Nombre de calle, altura"
+                            required="">
+                        <br>
+                        <br>
+
+                        <fieldset class="locale">
+                            <legend>Localidad</legend>
+                            <input type="text" name="city" placeholder="Ciudad" required="">
+                            <select name="state" required="">
+                                <option value="" selected="" disabled="">Provincia</option>
+                                <option value="BA">Buenos Aires</option>
+                                <option value="CA">Catamarca</option>
+                                <option value="CH">Chaco</option>
+                                <option value="CT">Chubut</option>
+                                <option value="CB">Cordoba</option>
+                                <option value="CT">Corrientes</option>
+                                <option value="ER">Entre Rios</option>
+                                <option value="FO">Formosa</option>
+                                <option value="JY">Jujuy</option>
+                                <option value="LP">La Pampa</option>
+                                <option value="LR">La Rioja</option>
+                                <option value="MZ">Mendoza</option>
+                                <option value="MI">Misiones</option>
+                                <option value="NQN">Neuquen</option>
+                                <option value="RN">Rio Negro</option>
+                                <option value="SA">Salta</option>
+                                <option value="SJ">San Juan</option>
+                                <option value="SL">San Luis</option>
+                                <option value="SC">Santa Cruz</option>
+                                <option value="SF">Santa Fe</option>
+                                <option value="SE">Santiago del Estero</option>
+                                <option value="TF">Tierra del Fuego</option>
+                                <option value="TU">Tucuman</option>
+
+                            </select>
+                            <input type="text" name="postal-code" placeholder="Codigo postal" required="">
+
+                        </fieldset>
+
+                        <br>
+                        <label for="note">Mensaje</label>
+                        <textarea rows="2" name="note" id="note"
+                            placeholder="Si queres, podes dejar un mensaje."></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
                     </fieldset>
+                    <input type="submit" value="Register">
                 </form>
 
-            </div>
 
+
+            </div>
 
 
 
@@ -81,8 +129,15 @@
 
 
     <br>
-    <footer>
-        <p class="foot"> Aca va el pie</p>
+    <footer id="footpage">
+        <div class="container">
+       
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-bitcoin"></i>
+    
+        </div>
+    
     </footer>
 
 

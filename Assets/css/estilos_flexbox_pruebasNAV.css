@@ -202,7 +202,15 @@ h3 {
 }
 
 #seccion .container h4 {
-    display: flex;
+
+    font-style: "bold";
+    font-size: 3em;
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+#seccion .container i {
+
     font-style: "bold";
     font-size: 3em;
     color: var(--text-color);
@@ -222,7 +230,7 @@ h3 {
     padding: 10px;
     color: var(--text-color);
     border-radius: 3px;
-    
+
 
 }
 
@@ -232,9 +240,10 @@ h3 {
     padding: 30px;
     color: var(--text-color);
     border-radius: 3px;
-    
+
 
 }
+
 #hero {
     background: VAR(--secondary-color);
     top: 0;
@@ -345,6 +354,14 @@ h3 {
     font-size: 20px;
 }
 
+#footpage .container {
+    display: flex;
+    justify-content: space-around;
+    color: var(--text-color);
+    font-size: 3VW;
+    
+
+}
 
 
 
@@ -453,18 +470,7 @@ footer {
 
 
 
-p.foot {
 
-    background-color: var(--secondary-color);
-    font-style: "bold";
-    font-size: 1em;
-    color: var(--text-color);
-    vertical-align: middle;
-    text-align: center;
-
-
-
-}
 
 
 
