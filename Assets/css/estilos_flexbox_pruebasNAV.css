@@ -94,7 +94,7 @@ h2 {
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-  
+
 
 }
 
@@ -114,7 +114,8 @@ h3 {
     background: VAR(--secondary-color);
     position: sticky;
     top: 0;
-  
+    box-shadow: ;
+
 }
 
 #navbar .container {
@@ -150,7 +151,7 @@ h3 {
     padding: .5em 1em;
     margin: 0px 0px;
     border-radius: 0px;
-    
+
 }
 
 .active,
@@ -169,6 +170,7 @@ h3 {
     padding: 10px;
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+    margin-bottom: 2.5vh;
     bottom: 10vh;
 }
 
@@ -186,9 +188,17 @@ h3 {
     max-width: 600px;
     background-color: var(--tertiary-color);
     border-radius: 1em;
-   
-    
-    
+
+}
+
+
+#seccion .container div:hover {
+
+
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 3px var(--bg-color);
+
+
 }
 
 #seccion .container h4 {
@@ -200,12 +210,31 @@ h3 {
 }
 
 #seccion .container p {
-    
+
     padding: 10px;
+    color: var(--text-color);
+
+
+}
+
+#seccion .container form {
+
+    padding: 10px;
+    color: var(--text-color);
+    border-radius: 3px;
     
 
 }
 
+
+#seccion .container fieldset {
+
+    padding: 30px;
+    color: var(--text-color);
+    border-radius: 3px;
+    
+
+}
 #hero {
     background: VAR(--secondary-color);
     top: 0;
@@ -233,7 +262,7 @@ h3 {
 
 
     border-radius: 1em;
-    background-color: aqua;
+
 
 }
 
@@ -247,11 +276,11 @@ h3 {
 }
 
 #hero .container p {
-   
+
     padding: 10px;
     font-size: 4em;
-    
-    
+
+
 
 
 }
@@ -259,9 +288,9 @@ h3 {
 #hero .container img {
 
     padding: 10px;
-    
+
     max-width: 75vw;
-    
+
 
 
 }
@@ -271,17 +300,18 @@ h3 {
 
 #cotiza {
     background: VAR(--secondary-color);
-  
+
     top: 0;
     margin-left: 2.5vw;
     margin-right: 2.5vw;
-    bottom: 10vh;
+    margin-bottom: 2.5vh;
     color: var(--text-color);
-    border-radius: 1%;
+    border-radius: 1px;
 }
 
 #cotiza .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -393,7 +423,7 @@ h3 {
 
     #hero .container p {
 
-        
+
         width: 45vw;
         font-size: 3em;
 
