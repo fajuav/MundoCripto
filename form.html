@@ -5,9 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title> MundoCripto </title>
-
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!--Estilos CSS -->
-    <link rel="stylesheet" href="assets/css/estilos_flexbox_pruebasNAV.css">
+    <link rel="stylesheet" href="assets/css/estilos_flexbox.css">
     <!--Iconos de fontawesome-->
     <script src="https://kit.fontawesome.com/466c33479e.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +21,8 @@
 
     <nav id="navbar">
         <div class="container">
-            <h1 class="logo"><i class="fa-sharp fa-solid fa-globe"></i> MUNDOCRIPTO</h1>
+            <!-- <a href="index.html"> <h1 class="logo"><i class="fa-sharp fa-solid fa-globe"></i> MUNDOCRIPTO</h1></a> -->
+            <a href="index.html"><h1 class="animate__animated animate__bounce"><i class=" fa-sharp fa-solid fa-globe "> </i> MUNDOCRIPTO</h1></a> 
             <ul>
                 <li class="nav-items"><a href="index.html" class="active" id="home">Home</a></li>
                 <li class="nav-items"><a href="about.html">Acerca de</a></li>
@@ -50,8 +54,8 @@
                 </h4>
 
                 <p>
-                    Registrandote podras recibir informacion sobre toda la actualidad sobre criptomonedas. Aprovecha, es
-                    gratis!
+                    <!-- Registrandote podras recibir informacion sobre toda la actualidad sobre criptomonedas. Aprovecha, es gratis! -->
+                    Resgistrate para recibir notificaciones de tus Criptomonedas o Token favoritos. Aprovecha, es gratis!
                 </p>
 
 
@@ -109,11 +113,11 @@
 
                         <br>
                         <label for="note">Mensaje</label>
-                        <textarea rows="2" name="note" id="note"
-                            placeholder="Si queres, podes dejar un mensaje."></textarea>
+                        <!-- <textarea rows="2" name="note" id="note" placeholder="Si queres, podes dejar un mensaje."></textarea> -->
+                        <textarea rows="5" cols= "64" name="note" id="note" placeholder="Dejanos tu consulta..." ></textarea>
                         <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
                     </fieldset>
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Registrar">
                 </form>
 
 

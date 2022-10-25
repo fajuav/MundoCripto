@@ -15,7 +15,10 @@
     --bolder-font: 900;
     --bg-color: rgb(34, 40, 49);
     --primary-color: rgb(0, 173, 181);
+    --primary-color-2: rgb(0, 89, 94);
     --secondary-color: rgb(57, 62, 70);
+    --tertiary-color: rgb(86, 93, 105);
+
     --text-title: rgb(53, 133, 139);
     --text-color: rgb(238, 238, 238);
     --bottom-margin: 0.5rem;
@@ -29,13 +32,17 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 /* CSS Resets */
 * {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
 }
 
 ul {
@@ -51,16 +58,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-* {
-
-
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    color: var(--text-color);
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    padding: 0px;
-
-}
 
 /* Puntos de corte */
 
@@ -71,65 +68,307 @@ body {
 
 }
 
-nav {
-    padding: 1em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+/* keyframe */
+
+@keyframes example {
+    from {
+        background-color: var(--primary-color);
+    }
+
+    to {
+        background-color: var(--primary-color-2);
+    }
+}
+
+/* H */
+
+h2 {
+    /*margin-right: 100px;*/
+
+    background-color: var(--primary-color);
+    font-style: "bold";
+    font-size: 5em;
+    color: var(--secondary-color);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+
+}
+
+
+
+h3 {
+
+    background-color: var(--secondary-color);
+    font-style: "bold";
+    font-size: 4em;
+    color: var(--text-color);
+}
+
+/*nav */
+
+#navbar {
+    background: VAR(--secondary-color);
     position: sticky;
+    top: 0;
+    box-shadow: none ; 
+
 }
 
-nav ul {
+#navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+
+}
+
+
+#navbar .animate__animated{
+    color: var(--text-color);
+    margin-left: 0px;
+}
+
+#navbar .container ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar .container ul li {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    background: white;
 }
 
-nav li a {
-    color: white;
-    display: block;
+#navbar .container ul li a {
     text-decoration: none;
+    color: var(--text-color);
     padding: .5em 1em;
+    margin: 0px 0px;
+    border-radius: 0px;
+
 }
 
-nav li a:hover {
-    background: tomato;
-    color: white;
+.active,
+#navbar .container ul li a:hover {
+    background-color: var(--orange);
+    color: #000 !important;
 }
 
 
+/* section */
 
-
-
-.textoPrincipal {
-    font-size: 12px;
+#seccion {
+    background: VAR(--secondary-color);
+    top: 0;
+    border-radius: 1%;
+    padding: 10px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 2.5vh;
+    bottom: 10vh;
 }
 
-.itemTipo1 {
-    background: var(--primary-color);
-    height: 300px;
+#seccion .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    padding: .5em 1em;
+    row-gap: 5vh;
+
+}
+
+#seccion .container div {
+    max-width: 600px;
+    background-color: var(--tertiary-color);
+    border-radius: 1em;
+
+}
+
+
+#seccion .container div:hover {
+
+
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 3px var(--bg-color);
+
+
+}
+
+#seccion .container h4 {
+
     font-style: "bold";
-    font-size: 35px;
+    font-size: 3em;
     color: var(--text-color);
-    order: 1;
-    flex: 2 1 auto;
-    max-width: 900px;
-    padding: 50px;
+    padding: 1rem;
 }
 
-.itemTipo2 {
-    background: var(--primary-color);
-    height: 300px;
+#seccion .container i {
+
     font-style: "bold";
-    font-size: 10px;
+    font-size: 3em;
     color: var(--text-color);
-    width: 20%;
-    order: 2;
-    flex: 1 2 auto;
+    padding: 1rem;
 }
+
+#seccion .container p {
+
+    padding: 10px;
+    color: var(--text-color);
+
+
+}
+
+#seccion .container form {
+
+    padding: 10px;
+    color: var(--text-color);
+    border-radius: 3px;
+
+
+}
+
+
+#seccion .container fieldset {
+
+    padding: 30px;
+    color: var(--text-color);
+    border-radius: 3px;
+
+
+}
+
+#hero {
+    background: VAR(--secondary-color);
+    top: 0;
+    color: var(--text-color);
+    border-radius: 1%;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+
+}
+
+#hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: var(--primary-color-2);
+    border-width: 10rem;
+
+
+}
+
+#hero .container div {
+
+
+    border-radius: 1em;
+
+
+}
+
+#hero .container h4 {
+
+    font-style: "bold";
+    font-size: 3em;
+    color: var(--text-color);
+
+
+}
+
+#hero .container p {
+
+    padding: 10px;
+    font-size: 4em;
+
+
+
+
+}
+
+#hero .container img {
+
+    padding: 10px;
+
+    max-width: 75vw;
+
+
+
+}
+
+
+/* cotizacion criptos */
+
+#cotiza {
+    background: VAR(--secondary-color);
+
+    top: 0;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 2.5vh;
+    color: var(--text-color);
+    border-radius: 1px;
+}
+
+#cotiza .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+#cotiza .container .coin-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+    margin: 7px;
+}
+
+#cotiza .container .coin-price .animate__animated {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#cotiza .container .coin-price .animate__animated img {
+    width: 100%;
+}
+
+#cotiza .container .coin-price div {
+    display: block;
+}
+
+#cotiza .container.coin-price div h1 {
+    font-size: 20px;
+}
+
+#footpage .container {
+    display: flex;
+    justify-content: space-around;
+    color: var(--text-color);
+    font-size: 3VW;
+    
+
+}
+
+
+
+
 
 /* tabletas //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     body {
         font-size: 14px;
 
@@ -141,43 +380,44 @@ nav li a:hover {
         -moz-osx-font-smoothing: grayscale;
         position: sticky;
     }
+
     nav ul {
         display: flex;
         justify-content: flex-end;
         position: sticky;
     }
 
+    #hero .container {
 
-    .textoPrincipal {
-        font-size: 14px;
+        flex-wrap: wrap;
+
     }
 
-    .itemTipo1 {
-        background: var(--primary-color);
-        height: 300px;
-        font-size: 35px;
-        font-style: "bold";
-        color: var(--text-color);
-        order: 1;
-        flex: 2 1 auto;
-        max-width: 900px;
-        padding: 50px;
+    #hero .container p {
+
+        font-size: 4em;
+        width: 60vw;
+
+
     }
 
-    .itemTipo2 {
-        background: var(--primary-color);
-        height: 300px;
-        font-style: "bold";
-        font-size: 15px;
-        color: var(--text-color);
-        width: 20%;
-        order: 2;
-        flex: 1 2 auto;
-    }
+    #hero .container img {
 
+
+        width: 50vw;
+
+
+    }
 
 
 }
+
+
+
+
+
+
+
 
 /* escritorio normales //////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
@@ -189,56 +429,35 @@ nav li a:hover {
         font-size: 18px;
     }
 
-    .itemTipo1 {
-        background: var(--primary-color);
-        height: 300px;
-        font-style: "bold";
-        font-size: 45px;
-        color: var(--text-color);
-        order: 1;
-        flex: 2 1 auto;
-        max-width: 900px;
+
+
+    #hero .container {
+
+        flex-wrap: wrap;
+
+
     }
 
-    .itemTipo2 {
-        background: var(--primary-color);
-        height: 300px;
-        font-style: "bold";
-        font-size: 18px;
-        color: var(--text-color);
-        width: 20%;
-        order: 2;
-        flex: 1 2 auto;
+    #hero .container p {
+
+
+        width: 45vw;
+        font-size: 3em;
+
+
     }
-}
 
+    #hero .container img {
+        width: 25vw;
 
-
-
-/* H */
-
-h1 {
-    /*margin-right: 100px;*/
-
-    background-color: var(--primary-color);
-    font-style: "bold";
-    font-size: 5em;
-    color: var(--secondary-color);
+    }
 
 }
 
 
-h2 {
-
-    background-color: var(--secondary-color);
-    font-weight: bolder;
-}
-
-h3 {
 
 
-    background-color: var(--secondary-color)
-}
+
 
 
 
@@ -251,104 +470,21 @@ footer {
 
 
 
-p.foot {
-
-    background-color: var(--secondary-color);
-    font-style: "bold";
-    font-size: 1em;
-    color: var(--text-color);
-    vertical-align: middle;
-    text-align: center;
-
-
-
-}
-
-
-
-a {
-
-    background-color: transparent;
-
-    color: rgb(231, 231, 231);
-
-}
-
-/* Tipo clase , selector */
-
-
-div.enlinea {
-    display: inline-block;
-
-    padding: 5px;
-    border: 1px solid blue;
-    background-color: rgb(116, 116, 65);
-
-
-}
 
 
 
 
 
-.TextoDestacado {
 
-    background-color: var(--primary-color);
-    font-style: "bold";
-    font-size: 5em;
-    color: var(--text-color);
 
-}
 
-span.a {
-    display: inline;
-    /* the default for span */
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: yellow;
-}
 
-span.b {
-    display: inline-block;
-    padding: 5px;
-    width: 30vw;
-    height: 60vh;
-}
-
-span.c {
-    display: block;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: yellow;
-}
 
 /* Tipo  */
 
 
-#texto {
-
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 5px;
-    background-color: rgb(50, 76, 110);
 
 
-}
-
-#textoconimagen {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 5px;
-    background-color: rgb(143, 143, 143);
-
-
-}
 
 /* Imagen*/
 
@@ -358,17 +494,7 @@ img.alineadaCentro {
 
 }
 
-/* Contenedor tipo flexbox*/
-.container {
-    background: var(--secondary-color);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
 
-
-
-}
 
 /* Aplicacion de orden a los hijos del contenedor*/
 
